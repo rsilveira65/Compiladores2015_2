@@ -1,7 +1,7 @@
 class Parser{
 
 	AnaliseLexica scanner;
-	
+
 
 	Parser(AnaliseLexica s)
 	{
@@ -17,7 +17,7 @@ class Parser{
 					throw (new Exception("Estava esperando: EOF"));
 
 		return resultado;
-	 
+
 	}
 
 	Exp Exp() throws Exception
@@ -26,14 +26,14 @@ class Parser{
 
 		if(tokenCorrente.token == TokenType.NUM)
 			return new Num(Integer.parseInt(tokenCorrente.lexema+""));
-		
-		
+
+
 		if(tokenCorrente.token == TokenType.APar)
 			{
 				exp1 = Exp();
 				if(exp1 == null)
 					throw (new Exception("Não encontrei expressão!"));
-				
+
 				Operador op = Op ();
 
 				if (op == null)
@@ -41,35 +41,38 @@ class Parser{
 
 				exp2 = Exp();
 				if(exp2 == null)
-					throw (new Exception("Não enconrtrei expressão!"));	
-				
+					throw (new Exception("Não enconrtrei expressão!"));
+
 				op.arg1 = exp1;
 				op.arg2 = exp2;
 				tokenCorrente =  scanner.getNextToken();
 				if(tokenCorrente.token != TokenType.FPar)
 					throw (new Exception("Estava esperando:)"));
 				return op;
-								
+
 			} else throw (new Exception ("Estava esperando: ( ou <NUM>"));
 
 		//return null;
-		
+
 	}
 
 	Operador Op () throws Exception
 		{
-		
+
 		Token tokenCorrente = scanner.getNextToken();
 		switch(tokenCorrente.token){
 			case SOMA:
 				return new Soma(null,null);
 			case MULT:
 				return new Mult(null,null);
-			default: 
+			case SUB:
+				return new Sub(null,null);
+			case DIV:
+				return new Div(null,null);
+			default:
 		}
 		return null;
-			
+
 
 		}
-
 }
