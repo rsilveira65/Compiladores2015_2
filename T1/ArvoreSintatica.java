@@ -13,7 +13,7 @@ class Operador extends Exp{
 	Operador (Exp a1, Exp a2) { arg1=a1; arg2=a2;}
 }
 
-class Soma extends Operador{
+class Soma extends Operador{   //modificado para add operacoes sub/div
 
 	Soma (Exp a1, Exp a2) { super(a1,a2);}
 }

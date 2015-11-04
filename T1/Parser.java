@@ -56,7 +56,7 @@ class Parser{
 
 	}
 
-	Operador Op () throws Exception
+	Operador Op () throws Exception  //modificado para add operacoes sub/div
 		{
 
 		Token tokenCorrente = scanner.getNextToken();

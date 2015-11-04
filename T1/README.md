@@ -3,10 +3,10 @@
 - Nome: Rafael Silveira
 - E-mail: rsilveira@inf.ufpel.edu.br
 
-1- Fazer com que o Compilador reconheça números naturais;
-2- Adicionar subtração na linguagem e operações correspondentes;
-3- Substituir o backend gerador de código por um backend que seja um interpretador;
-4- Implementar uma máquina de pilha que execute o código gerado pelo compilador;
+1- Fazer com que o Compilador reconheça números naturais; (faltou)
+2- Adicionar subtração na linguagem e operações correspondentes; (ok)
+3- Substituir o backend gerador de código por um backend que seja um interpretador;(ok)
+4- Implementar uma máquina de pilha que execute o código gerado pelo compilador; (ok)
 
 ## 1. Ambiente
 

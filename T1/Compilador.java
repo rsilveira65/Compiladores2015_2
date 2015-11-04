@@ -14,7 +14,7 @@ class Compilador{
 			Parser as = new Parser(al);
 
 			arv = as.parseProg();
-			System.out.println(args[1]);
+			// de acordo com o parametro passado, caso 1 chama o interpretador, por default, chama o compilador.
 
 			switch( (args.length > 1 ? Integer.parseInt(args[1]) : 0) )
 

@@ -1,6 +1,6 @@
 import java.io.*;
 
-enum TokenType{ NUM, SOMA, MULT, SUB, DIV, APar, FPar, EOF}
+enum TokenType{ NUM, SOMA, MULT, SUB, DIV, APar, FPar, EOF} //modificado para add operacoes sub/div
 
 class Token{
   char lexema;
@@ -38,7 +38,7 @@ class AnaliseLexica {
 			{
 
 
-				if (currchar >= '0' && currchar <= '9')
+				if (currchar >= '0' && currchar <= '9')   //modificado para add operacoes sub/div
 					return (new Token (currchar, TokenType.NUM));
 				else
         switch (currchar){

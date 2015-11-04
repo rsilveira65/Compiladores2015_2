@@ -37,7 +37,9 @@ while True:
 		pilha.append(x/y)
 
 	else:
-		no, var = aux.split(' ')
+		na, var = aux.split(' ')
+		#print aux
+		#print na
 		pilha.append(float(var))
 
 
